@@ -1,0 +1,13 @@
+version: '3'
+services:
+  runnertracker_web:
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    command: poetry run python -m runnertracker
+    volumes:
+      - .:/code
+    ports:
+      - "8080:8080"
+    #env_file:
+      #- "./env/development.env"
