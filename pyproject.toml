@@ -26,3 +26,10 @@ towncrier = "^21.3.0"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.towncrier]
+    package = 'runnertracker'
+    package_dir = ''
+    filename = 'CHANGELOG.md'
+    title_format =  '{version} ({project_date})'
+    directory = 'changelogs'
