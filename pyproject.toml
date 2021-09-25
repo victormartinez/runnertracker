@@ -18,6 +18,8 @@ uvicorn = "^0.15.0"
 ipython = "^7.26.0"
 structlog = "^21.1.0"
 colorama = "^0.4.4"
+bump2version = "^1.0.1"
+towncrier = "^21.3.0"
 
 [tool.poetry.dev-dependencies]
 
