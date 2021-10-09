@@ -1,8 +1,7 @@
+from aiohttp import web
 from structlog import get_logger, processors
 
 from runnertracker.application import RootView
-
-from aiohttp import web
 
 
 def run_app():
@@ -17,4 +16,4 @@ async def init_app(argv: str = None):
 
 
 def setup_routes(app):
-    app.router.add_view("/", RootView)
+    app.router.add_view('/', RootView)
