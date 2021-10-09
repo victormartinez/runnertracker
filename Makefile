@@ -17,22 +17,15 @@ check:
 
 update-version-patch:
 	@git checkout main && git pull
-	@poetry run bumpversion patch --dry-run --no-commit --list | grep new_version= | sed -e 's/new_version=//' | xargs -n 1 poetry run towncrier --yes --version
-	@git commit -am 'Update CHANGELOG'
 	@poetry run bumpversion patch
-	@echo "\nChangelog and patch version updated successfully"
+	@echo "\nPatch version updated successfully"
 
 update-version-minor:
 	@git checkout main && git pull
-	@poetry run bumpversion minor --dry-run --no-commit --list | grep new_version= | sed -e 's/new_version=//' | xargs -n 1 poetry run towncrier --yes --version
-	@git commit -am 'Update CHANGELOG'
 	@poetry run bumpversion minor
-	@echo "\nChangelog and minor version updated successfully"
+	@echo "\Minor version updated successfully"
 
 update-version-major:
 	@git checkout main && git pull
-	@poetry run bumpversion major --dry-run --no-commit --list | grep new_version= | sed -e 's/new_version=//' | xargs -n 1 poetry run towncrier --yes --version
-	@git commit -am 'Update CHANGELOG'
 	@poetry run bumpversion major
-	@echo "\nChangelog and major version updated successfully"
-
+	@echo "\nMajor version updated successfully"

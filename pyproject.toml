@@ -19,7 +19,6 @@ ipython = "^7.26.0"
 structlog = "^21.1.0"
 colorama = "^0.4.4"
 bump2version = "^1.0.1"
-towncrier = "^21.3.0"
 isort = "^5.9.3"
 
 [tool.poetry.dev-dependencies]
@@ -33,13 +32,6 @@ mypy = "^0.910"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.towncrier]
-package = 'runnertracker'
-package_dir = ''
-filename = 'CHANGELOG.md'
-title_format =  '{version} ({project_date})'
-directory = 'changelogs'
 
 [tool.black]
 line-length = 79
