@@ -16,4 +16,4 @@ async def init_app(argv: str = None):
 
 
 def setup_routes(app):
-    app.router.add_view('/', RootView)
+    app.router.add_view("/", RootView)
