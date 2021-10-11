@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "runnertracker"
-version = "0.1.0"
+version = "0.2.0"
 description = "A simple API to track runners in a Marathon."
 authors = ["Victor Martinez <vcrmartinez@gmail.com>"]
 license = "MIT"
