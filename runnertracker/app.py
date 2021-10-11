@@ -1,10 +1,13 @@
 from aiohttp import web
-from structlog import get_logger, processors
+from structlog import get_logger
 
 from runnertracker.application import RootView
 
+logger = get_logger(__name__)
+
 
 def run_app():
+    logger.info("Starting application...")
     app = init_app()
     web.run_app(app)
 
