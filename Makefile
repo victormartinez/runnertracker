@@ -4,9 +4,9 @@ help:
 	@echo "    check - Check code (black, flake, isort, mypy and bandit)"
 
 format:
-	@poetry run black .
-	@poetry run unify --in-place --recursive .
 	@poetry run isort .
+	@poetry run unify --in-place --recursive .
+	@poetry run black .
 
 check:
 	@poetry run black --check .
